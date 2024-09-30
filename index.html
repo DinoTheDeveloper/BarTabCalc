@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bar Tab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- i added html to create a layuout for the bar tab -->
+    <div id="app">
+        <h1>Open Bar Tab</h1>
+        <h3>By: Costandino</h3>
+        <div id="beverages-list"></div>
+        <div id="order-form">
+            <h2>New Order:</h2>
+            <div id="order-inputs"></div>
+            <button id="add-to-tab">Add to Tab</button>
+        </div>
+        <div id="bill-summary">
+            <h2>Bill Summary:</h2>
+            <div id="total-amount"></div>
+            <div id="split-bill">
+                <label for="split-number">Split bill between:</label>
+                <input type="number" id="split-number" min="1" value="1">
+                <button id="calculate-split">Calculate</button>
+            </div>
+            <div id="per-person-amount"></div>
+        </div>
+        <button id="export-tab">Export Bar Tab</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
