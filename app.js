@@ -8,11 +8,11 @@ const beverages =
 
 let currentTab = [];
 
-/// Created a reusable button component
+/// Created a reusable button component //DOM
 function createButton(text, onClick) {
 
     const button = document.createElement('button');
-    button.textContent = text;
+    button.textContent = text; //reusable, making it change text dependant on button
     button.addEventListener('click', onClick);
 
     return button;
@@ -36,6 +36,7 @@ function displayBeverages() {
     const beveragesList = document.getElementById('beverages-list');
 
     beveragesList.innerHTML = '<h2>Beers on tap:</h2>';
+
     beverages.forEach(beverage => {
         beveragesList.innerHTML += `<p>${beverage.name}: R${beverage.price}</p>`;
     });
@@ -49,7 +50,7 @@ function createOrderInputs() {
     beverages.forEach(beverage => {
         const label = document.createElement('label');
         label.textContent = beverage.name;
-        const input = createInput('number', `${beverage.name.toLowerCase()}-quantity`, 0);
+        const input = createInput('number', `${beverage.name.toLowerCase()}-quantity`, 0); //suffix to create a meaningful identifier for an input field,
         input.min = 0;
 
         orderInputs.appendChild(label);
@@ -135,5 +136,5 @@ function init() {
     document.getElementById('export-tab').addEventListener('click', exportTabAsCSV);
 }
 
-// Runs the app
+// Runs the app - scripts loads and makes everything ready immediately
 init();
